@@ -1,0 +1,18 @@
+<div class="flex justify-center flex-col">
+<div class="px-8 text-2xl text-red-600 font-semibold">Edit Profile</div>
+<form method="POST" enctype="multipart/form-data" class="bg-white  rounded px-8 " >
+    {% csrf_token %}
+    
+    {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+            <span class="text-red-700 font-medium text-sm">{{error}}</span> 
+        {% endfor %}
+    {% endif %}
+    
+   
+        {% include 'mixins/auth/input_form.html' with field=field %}
+
+    
+</form>
+
+</div>

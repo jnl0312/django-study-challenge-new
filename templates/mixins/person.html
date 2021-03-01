@@ -1,0 +1,5 @@
+<div class="rounded shadow-lg p-2 bg-gradient-to-r  flex flex-col items-center text-center transition duration-500 ease-in-out bg-white-600 hover:bg-gray-300 transform hover:-translate-y-0.3 hover:scale-110 rounded">
+    <div class="h-64 w-11/12 bg-cover bg-center rounded-2xl mb-2 mt-5" style="background-image: url({{person.photo.url}});"></div>
+    <h3 class="text-gray-900 text-base mb-2"><a href="{% url 'people:person' person.pk %}">{{person.name}}</a></h3>
+    <h5 class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{person.kind}}</h5>
+  </div>

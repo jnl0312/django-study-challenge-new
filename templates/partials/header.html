@@ -1,0 +1,13 @@
+  <div class="w-full h-full flex justify-center items-center text-lg">  <img class="h-10 bg-cover bg-center rounded-2xl mb-2 mt-5" src="https://nomadcoders.co/m.svg" />Nomad Library</div>
+  <header class="flex justify-around bg-red-400 text-white py-4 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 ">
+    <a href="{% url 'core:home' %}">Home</a>
+    <a href="{% url 'core:search' %}">Search</a>
+    {% if user.is_authenticated %}
+      <a href="{% url 'users:logout' %}">Log Out</a>
+      <a href="{% url 'users:profile' user.pk %}">My Profile</a>
+    {% else %}
+      <a href="{% url 'users:login' %}">Log In</a>
+      <a href="{% url 'users:signup' %}">Sign Up</a>
+    {% endif %}
+  </header>
+
